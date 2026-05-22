@@ -1042,3 +1042,265 @@ a:hover, a:focus-visible { text-decoration: underline; }
     .emergency-inner { flex-direction: column; text-align: center; }
     .page-banner { padding: 3rem 0; }
 }
+
+/* ===================================================================
+   Payment page styles
+   =================================================================== */
+
+.payment-section { background: var(--color-bg-alt); }
+
+.payment-layout {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1.4fr 1fr;
+    align-items: start;
+}
+
+.payment-main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.payment-fieldset {
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.payment-fieldset legend {
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    font-size: 1.1rem;
+    padding: 0 0.4rem;
+}
+
+.payment-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 0.75rem;
+}
+
+/* ---------- Service picker ---------- */
+.service-picker {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 0.75rem;
+}
+
+.service-pick label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
+.service-pick input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.service-pick-body {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: #fff;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.service-pick-body::before {
+    content: "";
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+    border: 2px solid var(--color-border);
+    background: #fff;
+    flex-shrink: 0;
+    grid-row: 1;
+    grid-column: 1;
+    position: relative;
+}
+
+.service-pick input[type="checkbox"]:checked + .service-pick-body::before {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' d='M3 8.5l3.5 3.5L13 4.5'/></svg>");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.service-pick input[type="checkbox"]:checked + .service-pick-body {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(29, 111, 165, 0.15);
+    background: #f4f8fb;
+}
+
+.service-pick input[type="checkbox"]:focus-visible + .service-pick-body {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+.service-pick-icon {
+    font-size: 1.6rem;
+    grid-column: 1;
+    grid-row: 1;
+    visibility: hidden;
+}
+
+.service-pick-body {
+    grid-template-columns: 22px auto 1fr auto;
+}
+
+.service-pick-body::before { grid-column: 1; }
+.service-pick-icon { grid-column: 2; visibility: visible; }
+.service-pick-text { grid-column: 3; display: flex; flex-direction: column; gap: 0.15rem; }
+.service-pick-price { grid-column: 4; }
+
+.service-pick-name {
+    font-weight: 700;
+    color: var(--color-text);
+}
+.service-pick-desc {
+    color: var(--color-text-muted);
+    font-size: 0.92rem;
+}
+.service-pick-price {
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    font-size: 1.05rem;
+    white-space: nowrap;
+}
+
+/* ---------- Payment summary sidebar ---------- */
+.payment-summary {
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: calc(var(--header-height) + 1rem);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.payment-summary h3 {
+    color: var(--color-primary-dark);
+    font-size: 1.15rem;
+    margin: 0;
+}
+
+.summary-items {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    padding: 0.75rem 0;
+    margin: 0;
+    max-height: 240px;
+    overflow-y: auto;
+}
+
+.summary-empty {
+    color: var(--color-text-muted);
+    font-style: italic;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+    font-size: 0.97rem;
+}
+
+.summary-item-name { color: var(--color-text); }
+.summary-item-price {
+    color: var(--color-primary-dark);
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.summary-totals {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin: 0;
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+.summary-line dt { color: var(--color-text-muted); font-size: 0.97rem; }
+.summary-line dd { color: var(--color-text); font-weight: 600; }
+
+.summary-total-line {
+    padding-top: 0.5rem;
+    border-top: 1px dashed var(--color-border);
+}
+.summary-total-line dt {
+    font-weight: 700;
+    color: var(--color-text);
+    font-size: 1.05rem;
+}
+.summary-total-line dd {
+    font-weight: 800;
+    color: var(--color-primary-dark);
+    font-size: 1.2rem;
+}
+
+.payment-secure-note {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    margin-top: 0.5rem;
+}
+
+.payment-status {
+    color: var(--color-primary-dark);
+    font-weight: 600;
+    min-height: 1.2em;
+}
+.payment-status.error { color: #c0392b; }
+
+.payment-fineprint {
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 960px) {
+    .payment-layout { grid-template-columns: 1fr; }
+    .payment-summary { position: static; top: auto; }
+}
+
+@media (max-width: 600px) {
+    .payment-grid { grid-template-columns: 1fr; }
+    .service-pick-body {
+        grid-template-columns: 22px auto 1fr;
+        row-gap: 0.25rem;
+    }
+    .service-pick-price {
+        grid-column: 3;
+        grid-row: 2;
+        justify-self: end;
+    }
+    .service-pick-text { grid-column: 2 / span 2; }
+}
+
