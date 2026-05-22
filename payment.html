@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a Payment | BlueLine Plumbing</title>
+    <meta name="description" content="Pay your BlueLine Plumbing invoice online. Secure, easy, and fast — we accept credit cards, debit, ACH, and digital wallets.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo" aria-label="BlueLine Plumbing home">
+                <span class="logo-mark" aria-hidden="true">💧</span>
+                <span class="logo-text">BlueLine<span class="logo-accent">Plumbing</span></span>
+            </a>
+
+            <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+
+            <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#reviews">Reviews</a></li>
+                    <li><a href="payment.html" aria-current="page">Payment</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-cta">
+                <a href="tel:+15555550123" class="header-phone" aria-label="Call us at 555-555-0123">
+                    <span aria-hidden="true">📞</span>
+                    <span>(555) 555-0123</span>
+                </a>
+                <a href="index.html#contact" class="btn btn-accent btn-sm">Book Online</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="page-banner" aria-labelledby="banner-heading">
+            <div class="page-banner-overlay"></div>
+            <div class="container page-banner-inner">
+                <h1 id="banner-heading">Make a Payment</h1>
+                <p class="banner-subhead">Pay your invoice online — secure, simple, and on your schedule.</p>
+            </div>
+        </section>
+
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <div class="container">
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li aria-current="page">Payment</li>
+                </ol>
+            </div>
+        </nav>
+
+        <section class="section intro" aria-labelledby="intro-heading">
+            <div class="container intro-inner">
+                <h2 id="intro-heading" class="visually-hidden">About online payments</h2>
+                <p>
+                    Paying for your plumbing work is just as easy as scheduling it. Enter
+                    your invoice number and amount below, choose a payment method, and
+                    you're done &mdash; we'll email a receipt right away. All transactions
+                    are processed over a secure, encrypted connection.
+                </p>
+            </div>
+        </section>
+
+        <section class="section contact" aria-labelledby="payment-heading">
+            <div class="container">
+                <header class="section-head">
+                    <h2 id="payment-heading">Pay Your Invoice</h2>
+                    <p class="section-sub">Have your invoice handy &mdash; the number is at the top of the page we left with you.</p>
+                </header>
+
+                <div class="contact-layout">
+                    <form class="quote-form" id="paymentForm" novalidate>
+                        <div class="field">
+                            <label for="payerName">Name on Invoice</label>
+                            <input id="payerName" name="payerName" type="text" autocomplete="name" required>
+                        </div>
+                        <div class="field">
+                            <label for="invoiceNumber">Invoice Number</label>
+                            <input id="invoiceNumber" name="invoiceNumber" type="text" inputmode="numeric" required>
+                        </div>
+                        <div class="field">
+                            <label for="payerEmail">Email for Receipt</label>
+                            <input id="payerEmail" name="payerEmail" type="email" autocomplete="email" required>
+                        </div>
+                        <div class="field">
+                            <label for="amount">Amount (USD)</label>
+                            <input id="amount" name="amount" type="number" min="1" step="0.01" required>
+                        </div>
+                        <div class="field field-full">
+                            <label for="paymentMethod">Payment Method</label>
+                            <select id="paymentMethod" name="paymentMethod" required>
+                                <option value="">Choose one…</option>
+                                <option>Credit Card</option>
+                                <option>Debit Card</option>
+                                <option>Bank Transfer (ACH)</option>
+                                <option>Apple Pay</option>
+                                <option>Google Pay</option>
+                            </select>
+                        </div>
+                        <div class="field field-full">
+                            <label for="paymentNotes">Notes (optional)</label>
+                            <textarea id="paymentNotes" name="paymentNotes" rows="3"></textarea>
+                        </div>
+                        <div class="field field-full">
+                            <button type="submit" class="btn btn-accent btn-lg">Submit Payment</button>
+                            <p class="form-status" id="paymentStatus" role="status" aria-live="polite"></p>
+                        </div>
+                    </form>
+
+                    <aside class="contact-info" aria-label="Payment information">
+                        <h3>Other Ways to Pay</h3>
+                        <p>Prefer to pay by phone or in person? We'll take care of you either way.</p>
+                        <address>
+                            <p><strong>By phone:</strong> <a href="tel:+15555550123">(555) 555-0123</a></p>
+                            <p><strong>By mail:</strong><br>BlueLine Plumbing<br>1234 Pipe St.<br>Metro City, ST 54321</p>
+                            <p><strong>Questions:</strong> <a href="mailto:billing@bluelineplumbing.com">billing@bluelineplumbing.com</a></p>
+                        </address>
+
+                        <h3>Accepted Methods</h3>
+                        <ul class="hours">
+                            <li><span>Cards</span><span>Visa, MC, Amex, Discover</span></li>
+                            <li><span>Bank</span><span>ACH / E-check</span></li>
+                            <li><span>Wallets</span><span>Apple Pay, Google Pay</span></li>
+                            <li><span>Other</span><span>Cash, Check</span></li>
+                        </ul>
+
+                        <a href="tel:+15555550123" class="btn btn-primary btn-lg btn-call btn-block">
+                            <span aria-hidden="true">📞</span>
+                            Call Billing: (555) 555-0123
+                        </a>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="section why-choose" aria-labelledby="secure-heading">
+            <div class="container">
+                <header class="section-head">
+                    <h2 id="secure-heading">Safe, Simple, and Transparent</h2>
+                    <p class="section-sub">Three reasons our customers pay with confidence.</p>
+                </header>
+
+                <div class="value-grid">
+                    <div class="value-item">
+                        <span class="value-icon" aria-hidden="true">🔒</span>
+                        <h3>Secure Processing</h3>
+                        <p>All payments are processed over an encrypted, PCI-compliant connection.</p>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-icon" aria-hidden="true">📧</span>
+                        <h3>Instant Receipt</h3>
+                        <p>Get an emailed receipt the moment your payment is confirmed.</p>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-icon" aria-hidden="true">💲</span>
+                        <h3>No Hidden Fees</h3>
+                        <p>Pay exactly what's on your invoice &mdash; no surcharges for using a card.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="final-cta" aria-labelledby="final-cta-heading">
+            <div class="container final-cta-inner">
+                <h2 id="final-cta-heading">Need Help With Your Bill?</h2>
+                <p>Our billing team is happy to walk through your invoice or set up a payment plan.</p>
+                <div class="final-cta-buttons">
+                    <a class="btn btn-accent btn-lg" href="index.html#contact">Contact Us</a>
+                    <a class="btn btn-primary btn-lg btn-call" href="tel:+15555550123">
+                        <span aria-hidden="true">📞</span>
+                        <span>Call Billing: (555) 555-0123</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-col">
+                <a href="index.html" class="logo logo-footer" aria-label="BlueLine Plumbing home">
+                    <span class="logo-mark" aria-hidden="true">💧</span>
+                    <span class="logo-text">BlueLine<span class="logo-accent">Plumbing</span></span>
+                </a>
+                <p>1234 Pipe St.<br>Metro City, ST 54321</p>
+                <p>License #PL-0099887</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Hours</h4>
+                <ul class="hours">
+                    <li><span>Mon &ndash; Fri</span><span>7AM &ndash; 7PM</span></li>
+                    <li><span>Sat &ndash; Sun</span><span>8AM &ndash; 5PM</span></li>
+                    <li><span>Emergencies</span><span>24/7</span></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul class="footer-nav">
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#reviews">Reviews</a></li>
+                    <li><a href="payment.html">Payment</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <ul class="social">
+                    <li><a href="#" aria-label="Facebook"><span aria-hidden="true">📘</span></a></li>
+                    <li><a href="#" aria-label="Instagram"><span aria-hidden="true">📷</span></a></li>
+                    <li><a href="#" aria-label="Twitter"><span aria-hidden="true">🐦</span></a></li>
+                    <li><a href="#" aria-label="YouTube"><span aria-hidden="true">📺</span></a></li>
+                </ul>
+                <a href="tel:+15555550123" class="footer-phone">📞 (555) 555-0123</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; <span id="year"></span> BlueLine Plumbing. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="tel:+15555550123" class="sticky-call" aria-label="Call BlueLine Plumbing now">
+        <span aria-hidden="true">📞</span>
+        <span>Call Now</span>
+    </a>
+
+    <script src="app.js"></script>
+</body>
+</html>
