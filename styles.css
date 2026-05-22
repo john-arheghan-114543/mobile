@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    padding: 1rem;
+}
+
+header {
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
