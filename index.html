@@ -3,16 +3,372 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobile App</title>
+    <meta name="description" content="BlueLine Plumbing — Reliable 24/7 plumbing services. Licensed, insured, family-owned. Same-day service across the metro area.">
+    <title>BlueLine Plumbing — Reliable Plumbing Services, 24/7</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Mobile App</h1>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#" class="logo" aria-label="BlueLine Plumbing home">
+                <span class="logo-mark" aria-hidden="true">💧</span>
+                <span class="logo-text">BlueLine<span class="logo-accent">Plumbing</span></span>
+            </a>
+
+            <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+
+            <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-cta">
+                <a href="tel:+15555550123" class="header-phone" aria-label="Call us at 555-555-0123">
+                    <span aria-hidden="true">📞</span>
+                    <span>(555) 555-0123</span>
+                </a>
+                <a href="#contact" class="btn btn-accent btn-sm">Book Online</a>
+            </div>
+        </div>
     </header>
-    <main>
-        <p>Welcome to the mobile web application.</p>
+
+    <main id="main">
+        <section id="home" class="hero" aria-label="Hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-inner">
+                <h1>Reliable Plumbing Services, <span class="hero-accent">24/7</span></h1>
+                <p class="hero-tagline">Fast response. Licensed &amp; insured. Locally owned and serving the metro area for over 25 years.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-accent btn-lg">Request a Quote</a>
+                    <a href="tel:+15555550123" class="btn btn-primary btn-lg btn-call">
+                        <span aria-hidden="true">📞</span>
+                        Call Now: (555) 555-0123
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="trust-strip" aria-label="Trust badges">
+            <div class="container trust-strip-inner">
+                <div class="trust-item"><span aria-hidden="true">✅</span> Licensed &amp; Insured</div>
+                <div class="trust-item"><span aria-hidden="true">🏠</span> Family-Owned Since 1998</div>
+                <div class="trust-item"><span aria-hidden="true">⚡</span> Same-Day Service</div>
+                <div class="trust-item"><span aria-hidden="true">💲</span> Upfront Pricing</div>
+                <div class="trust-item"><span aria-hidden="true">⭐</span> BBB A+ Accredited</div>
+                <div class="trust-item"><span aria-hidden="true">⭐⭐⭐⭐⭐</span> 4.9 on Google</div>
+            </div>
+        </section>
+
+        <section id="services" class="section services" aria-labelledby="services-heading">
+            <div class="container">
+                <header class="section-head">
+                    <h2 id="services-heading">Our Plumbing Services</h2>
+                    <p class="section-sub">From midnight emergencies to weekend remodels — we handle it all.</p>
+                </header>
+
+                <div class="card-grid">
+                    <a href="#contact" class="service-card">
+                        <span class="service-icon" aria-hidden="true">🚨</span>
+                        <h3>Emergency Repairs</h3>
+                        <p>24/7 response for burst pipes, overflowing toilets, and urgent leaks.</p>
+                    </a>
+                    <a href="#contact" class="service-card">
+                        <span class="service-icon" aria-hidden="true">🌀</span>
+                        <h3>Drain Cleaning</h3>
+                        <p>Clear stubborn clogs in sinks, tubs, and main lines with the right tools.</p>
+                    </a>
+                    <a href="#contact" class="service-card">
+                        <span class="service-icon" aria-hidden="true">🔥</span>
+                        <h3>Water Heater Installation</h3>
+                        <p>Tank, tankless, and hybrid systems — installed, serviced, and warrantied.</p>
+                    </a>
+                    <a href="#contact" class="service-card">
+                        <span class="service-icon" aria-hidden="true">💧</span>
+                        <h3>Leak Detection</h3>
+                        <p>Pinpoint hidden leaks without tearing up walls or floors.</p>
+                    </a>
+                    <a href="#contact" class="service-card">
+                        <span class="service-icon" aria-hidden="true">🛠️</span>
+                        <h3>Sewer Line Services</h3>
+                        <p>Camera inspections, hydro-jetting, and trenchless repair options.</p>
+                    </a>
+                    <a href="#contact" class="service-card">
+                        <span class="service-icon" aria-hidden="true">🛁</span>
+                        <h3>Bathroom Remodeling</h3>
+                        <p>Fixture upgrades and full bath remodels with clean, on-time finishes.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section why-choose" aria-labelledby="why-heading">
+            <div class="container">
+                <header class="section-head">
+                    <h2 id="why-heading">Why Choose BlueLine</h2>
+                    <p class="section-sub">Four reasons neighbors keep calling us back.</p>
+                </header>
+
+                <div class="value-grid">
+                    <div class="value-item">
+                        <span class="value-icon" aria-hidden="true">💲</span>
+                        <h3>Flat-Rate Pricing</h3>
+                        <p>You'll know the cost before we start. No surprise add-ons.</p>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-icon" aria-hidden="true">🎓</span>
+                        <h3>Certified Technicians</h3>
+                        <p>Background-checked, licensed, and trained on the latest equipment.</p>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-icon" aria-hidden="true">⏱️</span>
+                        <h3>Fast Response</h3>
+                        <p>Most jobs scheduled same-day. Emergencies handled around the clock.</p>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-icon" aria-hidden="true">🛡️</span>
+                        <h3>Satisfaction Guarantee</h3>
+                        <p>If it's not right, we make it right. Every job, every time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section service-area" aria-labelledby="area-heading">
+            <div class="container">
+                <header class="section-head">
+                    <h2 id="area-heading">Where We Serve</h2>
+                    <p class="section-sub">Proudly serving homeowners and businesses across the metro.</p>
+                </header>
+
+                <div class="area-layout">
+                    <div class="area-map" aria-hidden="true">
+                        <div class="area-map-inner">
+                            <span class="area-pin">📍</span>
+                            <p>Metro Service Area</p>
+                        </div>
+                    </div>
+                    <ul class="area-list">
+                        <li>Downtown</li>
+                        <li>Northside</li>
+                        <li>Riverbend</li>
+                        <li>Oak Hills</li>
+                        <li>Maple Grove</li>
+                        <li>Westfield</li>
+                        <li>Eastgate</li>
+                        <li>Pine Ridge</li>
+                        <li>Cedar Park</li>
+                        <li>Lakeshore</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews" class="section testimonials" aria-labelledby="reviews-heading">
+            <div class="container">
+                <header class="section-head">
+                    <h2 id="reviews-heading">What Our Customers Say</h2>
+                    <p class="section-sub">Real reviews from real neighbors.</p>
+                </header>
+
+                <div class="testimonial-row">
+                    <article class="testimonial">
+                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <p class="quote">"Showed up within an hour on a Sunday and fixed our burst pipe for the price quoted. Lifesavers."</p>
+                        <footer>
+                            <span class="customer-name">Sarah M.</span>
+                            <span class="customer-area">Oak Hills</span>
+                        </footer>
+                    </article>
+                    <article class="testimonial">
+                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <p class="quote">"Tech explained every option, didn't push the most expensive one, and left the place spotless. We'll be calling them again."</p>
+                        <footer>
+                            <span class="customer-name">David K.</span>
+                            <span class="customer-area">Riverbend</span>
+                        </footer>
+                    </article>
+                    <article class="testimonial">
+                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <p class="quote">"Water heater died on a Friday night. New one installed Saturday morning. Friendly, fast, and fair."</p>
+                        <footer>
+                            <span class="customer-name">Priya R.</span>
+                            <span class="customer-area">Maple Grove</span>
+                        </footer>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section how-it-works" aria-labelledby="how-heading">
+            <div class="container">
+                <header class="section-head">
+                    <h2 id="how-heading">How It Works</h2>
+                    <p class="section-sub">Three simple steps from problem to solved.</p>
+                </header>
+
+                <ol class="steps">
+                    <li class="step">
+                        <span class="step-number">1</span>
+                        <h3>Call or Book Online</h3>
+                        <p>Reach a real person 24/7 or schedule a visit in under a minute.</p>
+                    </li>
+                    <li class="step">
+                        <span class="step-number">2</span>
+                        <h3>We Arrive On Time</h3>
+                        <p>A licensed tech shows up in the promised window — and texts ahead.</p>
+                    </li>
+                    <li class="step">
+                        <span class="step-number">3</span>
+                        <h3>Job Done Right</h3>
+                        <p>Upfront quote, clean workmanship, and a guarantee in writing.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact" aria-labelledby="contact-heading">
+            <div class="container">
+                <header class="section-head">
+                    <h2 id="contact-heading">Request a Quote</h2>
+                    <p class="section-sub">Tell us what's going on and we'll get back fast.</p>
+                </header>
+
+                <div class="contact-layout">
+                    <form class="quote-form" id="quoteForm" novalidate>
+                        <div class="field">
+                            <label for="name">Name</label>
+                            <input id="name" name="name" type="text" autocomplete="name" required>
+                        </div>
+                        <div class="field">
+                            <label for="phone">Phone</label>
+                            <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+                        </div>
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input id="email" name="email" type="email" autocomplete="email" required>
+                        </div>
+                        <div class="field">
+                            <label for="service">Service Needed</label>
+                            <select id="service" name="service" required>
+                                <option value="">Choose one…</option>
+                                <option>Emergency Repair</option>
+                                <option>Drain Cleaning</option>
+                                <option>Water Heater</option>
+                                <option>Leak Detection</option>
+                                <option>Sewer Line</option>
+                                <option>Bathroom Remodel</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="field field-full">
+                            <label for="details">Brief Description</label>
+                            <textarea id="details" name="details" rows="4"></textarea>
+                        </div>
+                        <div class="field field-full">
+                            <button type="submit" class="btn btn-accent btn-lg">Send Request</button>
+                            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+                        </div>
+                    </form>
+
+                    <aside class="contact-info" aria-label="Contact information">
+                        <h3>Visit or Call Us</h3>
+                        <address>
+                            <p><strong>BlueLine Plumbing</strong></p>
+                            <p>1234 Pipe St.<br>Metro City, ST 54321</p>
+                            <p>
+                                <a href="tel:+15555550123" class="contact-phone">📞 (555) 555-0123</a>
+                            </p>
+                            <p><a href="mailto:hello@bluelineplumbing.com">hello@bluelineplumbing.com</a></p>
+                        </address>
+
+                        <h3>Hours</h3>
+                        <ul class="hours">
+                            <li><span>Mon – Fri</span><span>7:00 AM – 7:00 PM</span></li>
+                            <li><span>Sat – Sun</span><span>8:00 AM – 5:00 PM</span></li>
+                            <li><span>Emergencies</span><span>24/7</span></li>
+                        </ul>
+
+                        <div class="map" aria-label="Service area map">
+                            <div class="map-inner">
+                                <span aria-hidden="true">🗺️</span>
+                                <p>Map of our location</p>
+                            </div>
+                        </div>
+
+                        <a href="tel:+15555550123" class="btn btn-primary btn-lg btn-call btn-block">
+                            <span aria-hidden="true">📞</span>
+                            Call Now: (555) 555-0123
+                        </a>
+                    </aside>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-col">
+                <a href="#" class="logo logo-footer" aria-label="BlueLine Plumbing home">
+                    <span class="logo-mark" aria-hidden="true">💧</span>
+                    <span class="logo-text">BlueLine<span class="logo-accent">Plumbing</span></span>
+                </a>
+                <p>1234 Pipe St.<br>Metro City, ST 54321</p>
+                <p>License #PL-0099887</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Hours</h4>
+                <ul class="hours">
+                    <li><span>Mon – Fri</span><span>7AM – 7PM</span></li>
+                    <li><span>Sat – Sun</span><span>8AM – 5PM</span></li>
+                    <li><span>Emergencies</span><span>24/7</span></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul class="footer-nav">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <ul class="social">
+                    <li><a href="#" aria-label="Facebook"><span aria-hidden="true">📘</span></a></li>
+                    <li><a href="#" aria-label="Instagram"><span aria-hidden="true">📷</span></a></li>
+                    <li><a href="#" aria-label="Twitter"><span aria-hidden="true">🐦</span></a></li>
+                    <li><a href="#" aria-label="YouTube"><span aria-hidden="true">📺</span></a></li>
+                </ul>
+                <a href="tel:+15555550123" class="footer-phone">📞 (555) 555-0123</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; <span id="year"></span> BlueLine Plumbing. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="tel:+15555550123" class="sticky-call" aria-label="Call BlueLine Plumbing now">
+        <span aria-hidden="true">📞</span>
+        <span>Call Now</span>
+    </a>
+
     <script src="app.js"></script>
 </body>
 </html>
