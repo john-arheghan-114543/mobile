@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Make a Payment | BlueLine Plumbing</title>
-    <meta name="description" content="Pay your BlueLine Plumbing invoice online. Secure, easy, and fast — we accept credit cards, debit, ACH, and digital wallets.">
+    <title>Pay for Service | BlueLine Plumbing</title>
+    <meta name="description" content="Pick the BlueLine Plumbing services you need and pay securely online. Upfront pricing, no surprises.">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -48,8 +48,8 @@
         <section class="page-banner" aria-labelledby="banner-heading">
             <div class="page-banner-overlay"></div>
             <div class="container page-banner-inner">
-                <h1 id="banner-heading">Make a Payment</h1>
-                <p class="banner-subhead">Pay your invoice online — secure, simple, and on your schedule.</p>
+                <h1 id="banner-heading">Pay for Service</h1>
+                <p class="banner-subhead">Pick the services you need and pay securely &mdash; upfront pricing, no surprises.</p>
             </div>
         </section>
 
@@ -62,128 +62,208 @@
             </div>
         </nav>
 
-        <section class="section intro" aria-labelledby="intro-heading">
-            <div class="container intro-inner">
-                <h2 id="intro-heading" class="visually-hidden">About online payments</h2>
-                <p>
-                    Paying for your plumbing work is just as easy as scheduling it. Enter
-                    your invoice number and amount below, choose a payment method, and
-                    you're done &mdash; we'll email a receipt right away. All transactions
-                    are processed over a secure, encrypted connection.
-                </p>
-            </div>
-        </section>
-
-        <section class="section contact" aria-labelledby="payment-heading">
+        <section class="section payment-section" aria-labelledby="payment-heading">
             <div class="container">
                 <header class="section-head">
-                    <h2 id="payment-heading">Pay Your Invoice</h2>
-                    <p class="section-sub">Have your invoice handy &mdash; the number is at the top of the page we left with you.</p>
+                    <h2 id="payment-heading">Build Your Order</h2>
+                    <p class="section-sub">Select the services you'd like. We'll show the running total as you go.</p>
                 </header>
 
-                <div class="contact-layout">
-                    <form class="quote-form" id="paymentForm" novalidate>
-                        <div class="field">
-                            <label for="payerName">Name on Invoice</label>
-                            <input id="payerName" name="payerName" type="text" autocomplete="name" required>
-                        </div>
-                        <div class="field">
-                            <label for="invoiceNumber">Invoice Number</label>
-                            <input id="invoiceNumber" name="invoiceNumber" type="text" inputmode="numeric" required>
-                        </div>
-                        <div class="field">
-                            <label for="payerEmail">Email for Receipt</label>
-                            <input id="payerEmail" name="payerEmail" type="email" autocomplete="email" required>
-                        </div>
-                        <div class="field">
-                            <label for="amount">Amount (USD)</label>
-                            <input id="amount" name="amount" type="number" min="1" step="0.01" required>
-                        </div>
-                        <div class="field field-full">
-                            <label for="paymentMethod">Payment Method</label>
-                            <select id="paymentMethod" name="paymentMethod" required>
-                                <option value="">Choose one…</option>
-                                <option>Credit Card</option>
-                                <option>Debit Card</option>
-                                <option>Bank Transfer (ACH)</option>
-                                <option>Apple Pay</option>
-                                <option>Google Pay</option>
-                            </select>
-                        </div>
-                        <div class="field field-full">
-                            <label for="paymentNotes">Notes (optional)</label>
-                            <textarea id="paymentNotes" name="paymentNotes" rows="3"></textarea>
-                        </div>
-                        <div class="field field-full">
-                            <button type="submit" class="btn btn-accent btn-lg">Submit Payment</button>
-                            <p class="form-status" id="paymentStatus" role="status" aria-live="polite"></p>
-                        </div>
-                    </form>
+                <form id="paymentForm" class="payment-form" novalidate>
+                    <div class="payment-layout">
+                        <div class="payment-main">
+                            <fieldset class="payment-fieldset">
+                                <legend>1. Choose Services</legend>
+                                <ul class="service-picker" id="servicePicker">
+                                    <li class="service-pick">
+                                        <label>
+                                            <input type="checkbox" class="service-check" data-name="Emergency Repair" data-price="225">
+                                            <span class="service-pick-body">
+                                                <span class="service-pick-icon" aria-hidden="true">🚨</span>
+                                                <span class="service-pick-text">
+                                                    <span class="service-pick-name">Emergency Repair</span>
+                                                    <span class="service-pick-desc">24/7 response for burst pipes, urgent leaks, or overflowing fixtures.</span>
+                                                </span>
+                                                <span class="service-pick-price">$225</span>
+                                            </span>
+                                        </label>
+                                    </li>
+                                    <li class="service-pick">
+                                        <label>
+                                            <input type="checkbox" class="service-check" data-name="Drain Cleaning" data-price="149">
+                                            <span class="service-pick-body">
+                                                <span class="service-pick-icon" aria-hidden="true">🌀</span>
+                                                <span class="service-pick-text">
+                                                    <span class="service-pick-name">Drain Cleaning</span>
+                                                    <span class="service-pick-desc">Clear stubborn clogs in sinks, tubs, and main lines.</span>
+                                                </span>
+                                                <span class="service-pick-price">$149</span>
+                                            </span>
+                                        </label>
+                                    </li>
+                                    <li class="service-pick">
+                                        <label>
+                                            <input type="checkbox" class="service-check" data-name="Water Heater Installation" data-price="1450">
+                                            <span class="service-pick-body">
+                                                <span class="service-pick-icon" aria-hidden="true">🔥</span>
+                                                <span class="service-pick-text">
+                                                    <span class="service-pick-name">Water Heater Installation</span>
+                                                    <span class="service-pick-desc">Tank, tankless, or hybrid &mdash; installed and warrantied.</span>
+                                                </span>
+                                                <span class="service-pick-price">$1,450</span>
+                                            </span>
+                                        </label>
+                                    </li>
+                                    <li class="service-pick">
+                                        <label>
+                                            <input type="checkbox" class="service-check" data-name="Leak Detection" data-price="189">
+                                            <span class="service-pick-body">
+                                                <span class="service-pick-icon" aria-hidden="true">💧</span>
+                                                <span class="service-pick-text">
+                                                    <span class="service-pick-name">Leak Detection</span>
+                                                    <span class="service-pick-desc">Pinpoint hidden leaks without tearing up walls or floors.</span>
+                                                </span>
+                                                <span class="service-pick-price">$189</span>
+                                            </span>
+                                        </label>
+                                    </li>
+                                    <li class="service-pick">
+                                        <label>
+                                            <input type="checkbox" class="service-check" data-name="Sewer Line Service" data-price="525">
+                                            <span class="service-pick-body">
+                                                <span class="service-pick-icon" aria-hidden="true">🛠️</span>
+                                                <span class="service-pick-text">
+                                                    <span class="service-pick-name">Sewer Line Service</span>
+                                                    <span class="service-pick-desc">Camera inspection, hydro-jetting, or trenchless repair.</span>
+                                                </span>
+                                                <span class="service-pick-price">$525</span>
+                                            </span>
+                                        </label>
+                                    </li>
+                                    <li class="service-pick">
+                                        <label>
+                                            <input type="checkbox" class="service-check" data-name="Faucet &amp; Fixture Installation" data-price="175">
+                                            <span class="service-pick-body">
+                                                <span class="service-pick-icon" aria-hidden="true">🚿</span>
+                                                <span class="service-pick-text">
+                                                    <span class="service-pick-name">Faucet &amp; Fixture Installation</span>
+                                                    <span class="service-pick-desc">New faucet, sink, toilet, or showerhead installed cleanly.</span>
+                                                </span>
+                                                <span class="service-pick-price">$175</span>
+                                            </span>
+                                        </label>
+                                    </li>
+                                    <li class="service-pick">
+                                        <label>
+                                            <input type="checkbox" class="service-check" data-name="Sump Pump Service" data-price="299">
+                                            <span class="service-pick-body">
+                                                <span class="service-pick-icon" aria-hidden="true">⚙️</span>
+                                                <span class="service-pick-text">
+                                                    <span class="service-pick-name">Sump Pump Service</span>
+                                                    <span class="service-pick-desc">Installation, maintenance, or battery-backup upgrade.</span>
+                                                </span>
+                                                <span class="service-pick-price">$299</span>
+                                            </span>
+                                        </label>
+                                    </li>
+                                    <li class="service-pick">
+                                        <label>
+                                            <input type="checkbox" class="service-check" data-name="Garbage Disposal Installation" data-price="245">
+                                            <span class="service-pick-body">
+                                                <span class="service-pick-icon" aria-hidden="true">♻️</span>
+                                                <span class="service-pick-text">
+                                                    <span class="service-pick-name">Garbage Disposal Installation</span>
+                                                    <span class="service-pick-desc">Replace a worn unit &mdash; quieter, more powerful, usually under an hour.</span>
+                                                </span>
+                                                <span class="service-pick-price">$245</span>
+                                            </span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </fieldset>
 
-                    <aside class="contact-info" aria-label="Payment information">
-                        <h3>Other Ways to Pay</h3>
-                        <p>Prefer to pay by phone or in person? We'll take care of you either way.</p>
-                        <address>
-                            <p><strong>By phone:</strong> <a href="tel:+15555550123">(555) 555-0123</a></p>
-                            <p><strong>By mail:</strong><br>BlueLine Plumbing<br>1234 Pipe St.<br>Metro City, ST 54321</p>
-                            <p><strong>Questions:</strong> <a href="mailto:billing@bluelineplumbing.com">billing@bluelineplumbing.com</a></p>
-                        </address>
+                            <fieldset class="payment-fieldset">
+                                <legend>2. Your Information</legend>
+                                <div class="payment-grid">
+                                    <div class="field">
+                                        <label for="payName">Full Name</label>
+                                        <input id="payName" name="payName" type="text" autocomplete="name" required>
+                                    </div>
+                                    <div class="field">
+                                        <label for="payEmail">Email</label>
+                                        <input id="payEmail" name="payEmail" type="email" autocomplete="email" required>
+                                    </div>
+                                    <div class="field">
+                                        <label for="payPhone">Phone</label>
+                                        <input id="payPhone" name="payPhone" type="tel" autocomplete="tel" required>
+                                    </div>
+                                    <div class="field">
+                                        <label for="payZip">Service Zip Code</label>
+                                        <input id="payZip" name="payZip" type="text" autocomplete="postal-code" inputmode="numeric" maxlength="10" required>
+                                    </div>
+                                    <div class="field field-full">
+                                        <label for="payAddress">Service Address</label>
+                                        <input id="payAddress" name="payAddress" type="text" autocomplete="street-address" required>
+                                    </div>
+                                </div>
+                            </fieldset>
 
-                        <h3>Accepted Methods</h3>
-                        <ul class="hours">
-                            <li><span>Cards</span><span>Visa, MC, Amex, Discover</span></li>
-                            <li><span>Bank</span><span>ACH / E-check</span></li>
-                            <li><span>Wallets</span><span>Apple Pay, Google Pay</span></li>
-                            <li><span>Other</span><span>Cash, Check</span></li>
-                        </ul>
+                            <fieldset class="payment-fieldset">
+                                <legend>3. Payment Details</legend>
+                                <p class="payment-secure-note" aria-label="Security notice">
+                                    <span aria-hidden="true">🔒</span>
+                                    Your payment is encrypted and secure. We never store your full card number.
+                                </p>
+                                <div class="payment-grid">
+                                    <div class="field field-full">
+                                        <label for="cardName">Name on Card</label>
+                                        <input id="cardName" name="cardName" type="text" autocomplete="cc-name" required>
+                                    </div>
+                                    <div class="field field-full">
+                                        <label for="cardNumber">Card Number</label>
+                                        <input id="cardNumber" name="cardNumber" type="text" autocomplete="cc-number" inputmode="numeric" maxlength="19" placeholder="1234 5678 9012 3456" required>
+                                    </div>
+                                    <div class="field">
+                                        <label for="cardExpiry">Expiry (MM/YY)</label>
+                                        <input id="cardExpiry" name="cardExpiry" type="text" autocomplete="cc-exp" inputmode="numeric" maxlength="5" placeholder="MM/YY" required>
+                                    </div>
+                                    <div class="field">
+                                        <label for="cardCvc">CVC</label>
+                                        <input id="cardCvc" name="cardCvc" type="text" autocomplete="cc-csc" inputmode="numeric" maxlength="4" placeholder="123" required>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
 
-                        <a href="tel:+15555550123" class="btn btn-primary btn-lg btn-call btn-block">
-                            <span aria-hidden="true">📞</span>
-                            Call Billing: (555) 555-0123
-                        </a>
-                    </aside>
-                </div>
-            </div>
-        </section>
+                        <aside class="payment-summary" aria-labelledby="summary-heading">
+                            <h3 id="summary-heading">Order Summary</h3>
+                            <ul class="summary-items" id="summaryItems" aria-live="polite">
+                                <li class="summary-empty">No services selected yet.</li>
+                            </ul>
 
-        <section class="section why-choose" aria-labelledby="secure-heading">
-            <div class="container">
-                <header class="section-head">
-                    <h2 id="secure-heading">Safe, Simple, and Transparent</h2>
-                    <p class="section-sub">Three reasons our customers pay with confidence.</p>
-                </header>
+                            <dl class="summary-totals">
+                                <div class="summary-line">
+                                    <dt>Subtotal</dt>
+                                    <dd id="summarySubtotal">$0.00</dd>
+                                </div>
+                                <div class="summary-line">
+                                    <dt>Service Fee (5%)</dt>
+                                    <dd id="summaryFee">$0.00</dd>
+                                </div>
+                                <div class="summary-line summary-total-line">
+                                    <dt>Total</dt>
+                                    <dd id="summaryTotal">$0.00</dd>
+                                </div>
+                            </dl>
 
-                <div class="value-grid">
-                    <div class="value-item">
-                        <span class="value-icon" aria-hidden="true">🔒</span>
-                        <h3>Secure Processing</h3>
-                        <p>All payments are processed over an encrypted, PCI-compliant connection.</p>
+                            <button type="submit" class="btn btn-accent btn-lg btn-block" id="paySubmit">
+                                Pay <span id="payButtonTotal">$0.00</span>
+                            </button>
+                            <p class="payment-status" id="paymentStatus" role="status" aria-live="polite"></p>
+                            <p class="payment-fineprint">By submitting, you authorize BlueLine Plumbing to schedule the selected services. You'll receive a confirmation by email.</p>
+                        </aside>
                     </div>
-                    <div class="value-item">
-                        <span class="value-icon" aria-hidden="true">📧</span>
-                        <h3>Instant Receipt</h3>
-                        <p>Get an emailed receipt the moment your payment is confirmed.</p>
-                    </div>
-                    <div class="value-item">
-                        <span class="value-icon" aria-hidden="true">💲</span>
-                        <h3>No Hidden Fees</h3>
-                        <p>Pay exactly what's on your invoice &mdash; no surcharges for using a card.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="final-cta" aria-labelledby="final-cta-heading">
-            <div class="container final-cta-inner">
-                <h2 id="final-cta-heading">Need Help With Your Bill?</h2>
-                <p>Our billing team is happy to walk through your invoice or set up a payment plan.</p>
-                <div class="final-cta-buttons">
-                    <a class="btn btn-accent btn-lg" href="index.html#contact">Contact Us</a>
-                    <a class="btn btn-primary btn-lg btn-call" href="tel:+15555550123">
-                        <span aria-hidden="true">📞</span>
-                        <span>Call Billing: (555) 555-0123</span>
-                    </a>
-                </div>
+                </form>
             </div>
         </section>
     </main>
