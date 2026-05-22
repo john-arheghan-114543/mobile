@@ -8,325 +8,376 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
     <header class="site-header">
         <div class="container header-inner">
-            <a href="index.html" class="brand" aria-label="BlueLine Plumbing home">
-                <span class="brand-mark" aria-hidden="true">&#9830;</span>
-                <span class="brand-name">BlueLine Plumbing</span>
+            <a href="index.html" class="logo" aria-label="BlueLine Plumbing home">
+                <span class="logo-mark" aria-hidden="true">💧</span>
+                <span class="logo-text">BlueLine<span class="logo-accent">Plumbing</span></span>
             </a>
-            <nav class="site-nav" aria-label="Primary">
+
+            <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+
+            <nav id="primary-nav" class="primary-nav" aria-label="Primary">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html" aria-current="page">Services</a></li>
                     <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#reviews">Reviews</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
             </nav>
-            <a class="header-call" href="tel:+15551234567" aria-label="Call BlueLine Plumbing at 555-123-4567">
-                <span aria-hidden="true">&#9742;</span>
-                <span>(555) 123-4567</span>
-            </a>
+
+            <div class="header-cta">
+                <a href="tel:+15555550123" class="header-phone" aria-label="Call us at 555-555-0123">
+                    <span aria-hidden="true">📞</span>
+                    <span>(555) 555-0123</span>
+                </a>
+                <a href="index.html#contact" class="btn btn-accent btn-sm">Book Online</a>
+            </div>
         </div>
     </header>
 
     <main id="main">
         <section class="page-banner" aria-labelledby="banner-heading">
-            <div class="container">
+            <div class="page-banner-overlay"></div>
+            <div class="container page-banner-inner">
                 <h1 id="banner-heading">Our Plumbing Services</h1>
                 <p class="banner-subhead">Licensed, insured, and ready to handle any job, big or small.</p>
             </div>
         </section>
 
-        <nav class="breadcrumbs container" aria-label="Breadcrumb">
-            <ol>
-                <li><a href="index.html">Home</a></li>
-                <li aria-current="page">Services</li>
-            </ol>
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <div class="container">
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li aria-current="page">Services</li>
+                </ol>
+            </div>
         </nav>
 
-        <section class="intro container" aria-labelledby="intro-heading">
-            <h2 id="intro-heading" class="visually-hidden">About our services</h2>
-            <p>
-                For more than twenty years, BlueLine Plumbing has delivered honest, reliable
-                plumbing work to families and businesses across the region. We believe in
-                transparent, upfront pricing and a complete range of services &mdash; from
-                a quick faucet swap to a full repipe. Whatever you need, our licensed team
-                is ready to take care of it the right way.
-            </p>
+        <section class="section intro" aria-labelledby="intro-heading">
+            <div class="container intro-inner">
+                <h2 id="intro-heading" class="visually-hidden">About our services</h2>
+                <p>
+                    For more than twenty years, BlueLine Plumbing has delivered honest, reliable
+                    plumbing work to families and businesses across the region. We believe in
+                    transparent, upfront pricing and a complete range of services &mdash; from
+                    a quick faucet swap to a full repipe. Whatever you need, our licensed team
+                    is ready to take care of it the right way.
+                </p>
+            </div>
         </section>
 
-        <section class="services-section container" aria-labelledby="services-heading">
-            <h2 id="services-heading">What We Offer</h2>
+        <section class="section services-section" aria-labelledby="services-heading">
+            <div class="container">
+                <header class="section-head">
+                    <h2 id="services-heading">What We Offer</h2>
+                    <p class="section-sub">Residential and commercial plumbing &mdash; same friendly team, same upfront pricing.</p>
+                </header>
 
-            <div class="tabs" role="tablist" aria-label="Service categories">
-                <button id="tab-residential" class="tab is-active" role="tab" aria-selected="true" aria-controls="panel-residential" data-target="residential" type="button">Residential</button>
-                <button id="tab-commercial" class="tab" role="tab" aria-selected="false" aria-controls="panel-commercial" data-target="commercial" tabindex="-1" type="button">Commercial</button>
-            </div>
+                <div class="tabs" role="tablist" aria-label="Service categories">
+                    <button id="tab-residential" class="tab is-active" role="tab" aria-selected="true" aria-controls="panel-residential" data-target="residential" type="button">Residential</button>
+                    <button id="tab-commercial" class="tab" role="tab" aria-selected="false" aria-controls="panel-commercial" data-target="commercial" tabindex="-1" type="button">Commercial</button>
+                </div>
 
-            <div id="panel-residential" class="service-panel is-active" role="tabpanel" aria-labelledby="tab-residential">
-                <ul class="services-grid">
-                    <li class="service-card">
-                        <span class="service-icon" aria-hidden="true">&#9888;</span>
-                        <h3>Emergency Plumbing</h3>
-                        <p>Burst pipes, overflowing fixtures, sudden leaks &mdash; we respond fast, day or night, to stop the damage.</p>
-                        <a class="card-link" href="#">Learn More <span aria-hidden="true">&rarr;</span></a>
-                    </li>
-                    <li class="service-card">
-                        <span class="service-icon" aria-hidden="true">&#127754;</span>
-                        <h3>Drain Cleaning</h3>
-                        <p>Clear slow or clogged drains with camera-guided cleaning that protects your pipes and prevents repeat blockages.</p>
-                        <a class="card-link" href="#">Learn More <span aria-hidden="true">&rarr;</span></a>
-                    </li>
-                    <li class="service-card">
-                        <span class="service-icon" aria-hidden="true">&#128293;</span>
-                        <h3>Water Heater Repair &amp; Installation</h3>
-                        <p>Tank and tankless service, repair, and same-day replacement from every major manufacturer.</p>
-                        <a class="card-link" href="#">Learn More <span aria-hidden="true">&rarr;</span></a>
-                    </li>
-                    <li class="service-card">
-                        <span class="service-icon" aria-hidden="true">&#128300;</span>
-                        <h3>Leak Detection &amp; Repair</h3>
-                        <p>Non-invasive acoustic and thermal detection finds hidden leaks before they damage walls, floors, or foundations.</p>
-                        <a class="card-link" href="#">Learn More <span aria-hidden="true">&rarr;</span></a>
-                    </li>
-                    <li class="service-card">
-                        <span class="service-icon" aria-hidden="true">&#128736;</span>
-                        <h3>Pipe Repair &amp; Repiping</h3>
-                        <p>From spot repairs to whole-home repiping in PEX or copper, built to code and backed by our workmanship guarantee.</p>
-                        <a class="card-link" href="#">Learn More <span aria-hidden="true">&rarr;</span></a>
-                    </li>
-                    <li class="service-card">
-                        <span class="service-icon" aria-hidden="true">&#127968;</span>
-                        <h3>Sewer Line Services</h3>
-                        <p>Camera inspection, hydro jetting, and trenchless repair to restore main lines with minimal disruption to your yard.</p>
-                        <a class="card-link" href="#">Learn More <span aria-hidden="true">&rarr;</span></a>
-                    </li>
-                    <li class="service-card">
-                        <span class="service-icon" aria-hidden="true">&#9851;</span>
-                        <h3>Garbage Disposal Installation</h3>
-                        <p>Replace a worn or jammed disposal with a quieter, more powerful unit &mdash; usually installed in under an hour.</p>
-                        <a class="card-link" href="#">Learn More <span aria-hidden="true">&rarr;</span></a>
-                    </li>
-                    <li class="service-card">
-                        <span class="service-icon" aria-hidden="true">&#128688;</span>
-                        <h3>Faucet &amp; Fixture Installation</h3>
-                        <p>New faucets, sinks, toilets, and showerheads installed cleanly with leak-free connections you can count on.</p>
-                        <a class="card-link" href="#">Learn More <span aria-hidden="true">&rarr;</span></a>
-                    </li>
-                    <li class="service-card">
-                        <span class="service-icon" aria-hidden="true">&#9784;</span>
-                        <h3>Sump Pump Services</h3>
-                        <p>Sump pump installation, maintenance, and battery-backup upgrades to keep your basement dry when storms hit.</p>
-                        <a class="card-link" href="#">Learn More <span aria-hidden="true">&rarr;</span></a>
-                    </li>
-                    <li class="service-card">
-                        <span class="service-icon" aria-hidden="true">&#128737;</span>
-                        <h3>Bathroom &amp; Kitchen Remodeling</h3>
-                        <p>Full plumbing rough-in and finish work for remodels &mdash; coordinated with your contractor or completed by our team.</p>
-                        <a class="card-link" href="#">Learn More <span aria-hidden="true">&rarr;</span></a>
-                    </li>
-                </ul>
-            </div>
+                <div id="panel-residential" class="service-panel is-active" role="tabpanel" aria-labelledby="tab-residential">
+                    <ul class="card-grid services-grid">
+                        <li class="service-card">
+                            <span class="service-icon" aria-hidden="true">🚨</span>
+                            <h3>Emergency Plumbing</h3>
+                            <p>Burst pipes, overflowing fixtures, sudden leaks &mdash; we respond fast, day or night, to stop the damage.</p>
+                            <a class="card-link" href="index.html#contact">Learn More <span aria-hidden="true">&rarr;</span></a>
+                        </li>
+                        <li class="service-card">
+                            <span class="service-icon" aria-hidden="true">🌀</span>
+                            <h3>Drain Cleaning</h3>
+                            <p>Clear slow or clogged drains with camera-guided cleaning that protects your pipes and prevents repeat blockages.</p>
+                            <a class="card-link" href="index.html#contact">Learn More <span aria-hidden="true">&rarr;</span></a>
+                        </li>
+                        <li class="service-card">
+                            <span class="service-icon" aria-hidden="true">🔥</span>
+                            <h3>Water Heater Repair &amp; Installation</h3>
+                            <p>Tank and tankless service, repair, and same-day replacement from every major manufacturer.</p>
+                            <a class="card-link" href="index.html#contact">Learn More <span aria-hidden="true">&rarr;</span></a>
+                        </li>
+                        <li class="service-card">
+                            <span class="service-icon" aria-hidden="true">💧</span>
+                            <h3>Leak Detection &amp; Repair</h3>
+                            <p>Non-invasive acoustic and thermal detection finds hidden leaks before they damage walls, floors, or foundations.</p>
+                            <a class="card-link" href="index.html#contact">Learn More <span aria-hidden="true">&rarr;</span></a>
+                        </li>
+                        <li class="service-card">
+                            <span class="service-icon" aria-hidden="true">🛠️</span>
+                            <h3>Pipe Repair &amp; Repiping</h3>
+                            <p>From spot repairs to whole-home repiping in PEX or copper, built to code and backed by our workmanship guarantee.</p>
+                            <a class="card-link" href="index.html#contact">Learn More <span aria-hidden="true">&rarr;</span></a>
+                        </li>
+                        <li class="service-card">
+                            <span class="service-icon" aria-hidden="true">🏠</span>
+                            <h3>Sewer Line Services</h3>
+                            <p>Camera inspection, hydro jetting, and trenchless repair to restore main lines with minimal disruption to your yard.</p>
+                            <a class="card-link" href="index.html#contact">Learn More <span aria-hidden="true">&rarr;</span></a>
+                        </li>
+                        <li class="service-card">
+                            <span class="service-icon" aria-hidden="true">♻️</span>
+                            <h3>Garbage Disposal Installation</h3>
+                            <p>Replace a worn or jammed disposal with a quieter, more powerful unit &mdash; usually installed in under an hour.</p>
+                            <a class="card-link" href="index.html#contact">Learn More <span aria-hidden="true">&rarr;</span></a>
+                        </li>
+                        <li class="service-card">
+                            <span class="service-icon" aria-hidden="true">🚿</span>
+                            <h3>Faucet &amp; Fixture Installation</h3>
+                            <p>New faucets, sinks, toilets, and showerheads installed cleanly with leak-free connections you can count on.</p>
+                            <a class="card-link" href="index.html#contact">Learn More <span aria-hidden="true">&rarr;</span></a>
+                        </li>
+                        <li class="service-card">
+                            <span class="service-icon" aria-hidden="true">⚙️</span>
+                            <h3>Sump Pump Services</h3>
+                            <p>Sump pump installation, maintenance, and battery-backup upgrades to keep your basement dry when storms hit.</p>
+                            <a class="card-link" href="index.html#contact">Learn More <span aria-hidden="true">&rarr;</span></a>
+                        </li>
+                        <li class="service-card">
+                            <span class="service-icon" aria-hidden="true">🛁</span>
+                            <h3>Bathroom &amp; Kitchen Remodeling</h3>
+                            <p>Full plumbing rough-in and finish work for remodels &mdash; coordinated with your contractor or completed by our team.</p>
+                            <a class="card-link" href="index.html#contact">Learn More <span aria-hidden="true">&rarr;</span></a>
+                        </li>
+                    </ul>
+                </div>
 
-            <div id="panel-commercial" class="service-panel" role="tabpanel" aria-labelledby="tab-commercial" hidden>
-                <ul class="services-grid">
-                    <li class="service-card">
-                        <span class="service-icon" aria-hidden="true">&#127970;</span>
-                        <h3>Commercial Repairs</h3>
-                        <p>Restaurants, offices, and retail &mdash; fast plumbing repairs that minimize downtime and protect your customers.</p>
-                        <a class="card-link" href="#">Learn More <span aria-hidden="true">&rarr;</span></a>
-                    </li>
-                    <li class="service-card">
-                        <span class="service-icon" aria-hidden="true">&#128737;</span>
-                        <h3>Backflow Testing</h3>
-                        <p>Annual testing, certification, and repair of backflow preventers to keep your property compliant with local code.</p>
-                        <a class="card-link" href="#">Learn More <span aria-hidden="true">&rarr;</span></a>
-                    </li>
-                    <li class="service-card">
-                        <span class="service-icon" aria-hidden="true">&#127979;</span>
-                        <h3>Commercial Sewer &amp; Drain</h3>
-                        <p>High-volume drain cleaning and sewer line maintenance for restaurants, multi-family buildings, and facilities.</p>
-                        <a class="card-link" href="#">Learn More <span aria-hidden="true">&rarr;</span></a>
-                    </li>
-                    <li class="service-card">
-                        <span class="service-icon" aria-hidden="true">&#128737;</span>
-                        <h3>Preventive Maintenance Plans</h3>
-                        <p>Scheduled inspections and tune-ups that catch issues early and extend the life of your plumbing systems.</p>
-                        <a class="card-link" href="#">Learn More <span aria-hidden="true">&rarr;</span></a>
-                    </li>
-                    <li class="service-card">
-                        <span class="service-icon" aria-hidden="true">&#128296;</span>
-                        <h3>New Construction Plumbing</h3>
-                        <p>Full rough-in and finish plumbing for new commercial builds, coordinated to keep your project on schedule.</p>
-                        <a class="card-link" href="#">Learn More <span aria-hidden="true">&rarr;</span></a>
-                    </li>
-                    <li class="service-card">
-                        <span class="service-icon" aria-hidden="true">&#128737;</span>
-                        <h3>Water Line Services</h3>
-                        <p>Commercial water main installation, replacement, and emergency repair for properties of every size.</p>
-                        <a class="card-link" href="#">Learn More <span aria-hidden="true">&rarr;</span></a>
-                    </li>
-                </ul>
+                <div id="panel-commercial" class="service-panel" role="tabpanel" aria-labelledby="tab-commercial" hidden>
+                    <ul class="card-grid services-grid">
+                        <li class="service-card">
+                            <span class="service-icon" aria-hidden="true">🏢</span>
+                            <h3>Commercial Repairs</h3>
+                            <p>Restaurants, offices, and retail &mdash; fast plumbing repairs that minimize downtime and protect your customers.</p>
+                            <a class="card-link" href="index.html#contact">Learn More <span aria-hidden="true">&rarr;</span></a>
+                        </li>
+                        <li class="service-card">
+                            <span class="service-icon" aria-hidden="true">🛡️</span>
+                            <h3>Backflow Testing</h3>
+                            <p>Annual testing, certification, and repair of backflow preventers to keep your property compliant with local code.</p>
+                            <a class="card-link" href="index.html#contact">Learn More <span aria-hidden="true">&rarr;</span></a>
+                        </li>
+                        <li class="service-card">
+                            <span class="service-icon" aria-hidden="true">🏭</span>
+                            <h3>Commercial Sewer &amp; Drain</h3>
+                            <p>High-volume drain cleaning and sewer line maintenance for restaurants, multi-family buildings, and facilities.</p>
+                            <a class="card-link" href="index.html#contact">Learn More <span aria-hidden="true">&rarr;</span></a>
+                        </li>
+                        <li class="service-card">
+                            <span class="service-icon" aria-hidden="true">📅</span>
+                            <h3>Preventive Maintenance Plans</h3>
+                            <p>Scheduled inspections and tune-ups that catch issues early and extend the life of your plumbing systems.</p>
+                            <a class="card-link" href="index.html#contact">Learn More <span aria-hidden="true">&rarr;</span></a>
+                        </li>
+                        <li class="service-card">
+                            <span class="service-icon" aria-hidden="true">🔨</span>
+                            <h3>New Construction Plumbing</h3>
+                            <p>Full rough-in and finish plumbing for new commercial builds, coordinated to keep your project on schedule.</p>
+                            <a class="card-link" href="index.html#contact">Learn More <span aria-hidden="true">&rarr;</span></a>
+                        </li>
+                        <li class="service-card">
+                            <span class="service-icon" aria-hidden="true">🚰</span>
+                            <h3>Water Line Services</h3>
+                            <p>Commercial water main installation, replacement, and emergency repair for properties of every size.</p>
+                            <a class="card-link" href="index.html#contact">Learn More <span aria-hidden="true">&rarr;</span></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
 
         <aside class="cta-strip" aria-labelledby="cta-strip-heading">
             <div class="container cta-strip-inner">
                 <p id="cta-strip-heading">Not sure what you need? Call us for a free diagnosis.</p>
-                <a class="btn btn-secondary" href="tel:+15551234567">
-                    <span aria-hidden="true">&#9742;</span>
-                    <span>(555) 123-4567</span>
+                <a class="btn btn-primary" href="tel:+15555550123">
+                    <span aria-hidden="true">📞</span>
+                    <span>(555) 555-0123</span>
                 </a>
             </div>
         </aside>
 
         <section class="emergency-block" aria-labelledby="emergency-heading">
             <div class="container emergency-inner">
-                <span class="emergency-icon" aria-hidden="true">&#9201;</span>
+                <span class="emergency-icon" aria-hidden="true">⏱️</span>
                 <div class="emergency-copy">
                     <h2 id="emergency-heading">24/7 Emergency Plumbing</h2>
                     <p>Pipes don't wait for business hours &mdash; and neither do we. A live dispatcher answers every call, every hour of every day.</p>
                 </div>
-                <a class="btn btn-emergency" href="tel:+15551234567">
-                    <span aria-hidden="true">&#9742;</span>
-                    <span>Call Now &middot; (555) 123-4567</span>
+                <a class="btn btn-accent btn-lg btn-call" href="tel:+15555550123">
+                    <span aria-hidden="true">📞</span>
+                    <span>Call Now &middot; (555) 555-0123</span>
                 </a>
             </div>
         </section>
 
-        <section class="why-us container" aria-labelledby="why-heading">
-            <h2 id="why-heading">Why Choose Our Services</h2>
-            <ul class="why-grid">
-                <li>
-                    <span class="why-icon" aria-hidden="true">&#128178;</span>
-                    <h3>Upfront Pricing</h3>
-                    <p>Flat-rate quotes before we start &mdash; no surprises on the invoice.</p>
-                </li>
-                <li>
-                    <span class="why-icon" aria-hidden="true">&#9889;</span>
-                    <h3>Same-Day Service</h3>
-                    <p>Most service calls completed the same day you book them.</p>
-                </li>
-                <li>
-                    <span class="why-icon" aria-hidden="true">&#127942;</span>
-                    <h3>Certified Technicians</h3>
-                    <p>Every plumber on our team is licensed, insured, and background-checked.</p>
-                </li>
-                <li>
-                    <span class="why-icon" aria-hidden="true">&#10003;</span>
-                    <h3>100% Satisfaction Guarantee</h3>
-                    <p>If you're not happy with the work, we'll make it right &mdash; period.</p>
-                </li>
-            </ul>
+        <section class="section why-us" aria-labelledby="why-heading">
+            <div class="container">
+                <header class="section-head">
+                    <h2 id="why-heading">Why Choose Our Services</h2>
+                    <p class="section-sub">Four reasons neighbors keep calling us back.</p>
+                </header>
+                <div class="value-grid">
+                    <div class="value-item">
+                        <span class="value-icon" aria-hidden="true">💲</span>
+                        <h3>Upfront Pricing</h3>
+                        <p>Flat-rate quotes before we start &mdash; no surprises on the invoice.</p>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-icon" aria-hidden="true">⚡</span>
+                        <h3>Same-Day Service</h3>
+                        <p>Most service calls completed the same day you book them.</p>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-icon" aria-hidden="true">🏆</span>
+                        <h3>Certified Technicians</h3>
+                        <p>Every plumber on our team is licensed, insured, and background-checked.</p>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-icon" aria-hidden="true">✅</span>
+                        <h3>100% Satisfaction Guarantee</h3>
+                        <p>If you're not happy with the work, we'll make it right &mdash; period.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section class="process container" aria-labelledby="process-heading">
-            <h2 id="process-heading">How It Works</h2>
-            <ol class="process-steps">
-                <li>
-                    <span class="step-icon" aria-hidden="true">&#128197;</span>
-                    <span class="step-number">Step 1</span>
-                    <h3>Schedule Your Service</h3>
-                    <p>Book online or call &mdash; pick the day and window that works for you.</p>
-                </li>
-                <li>
-                    <span class="step-icon" aria-hidden="true">&#128221;</span>
-                    <span class="step-number">Step 2</span>
-                    <h3>Receive a Free Estimate</h3>
-                    <p>We diagnose the issue and quote a flat price before any work begins.</p>
-                </li>
-                <li>
-                    <span class="step-icon" aria-hidden="true">&#128736;</span>
-                    <span class="step-number">Step 3</span>
-                    <h3>We Complete the Job</h3>
-                    <p>Clean, code-compliant work from a friendly technician who respects your home.</p>
-                </li>
-                <li>
-                    <span class="step-icon" aria-hidden="true">&#128274;</span>
-                    <span class="step-number">Step 4</span>
-                    <h3>Enjoy the Guarantee</h3>
-                    <p>Every repair is backed by our written workmanship and satisfaction guarantee.</p>
-                </li>
-            </ol>
+        <section class="section how-it-works process" aria-labelledby="process-heading">
+            <div class="container">
+                <header class="section-head">
+                    <h2 id="process-heading">How It Works</h2>
+                    <p class="section-sub">Four simple steps from problem to solved.</p>
+                </header>
+                <ol class="steps">
+                    <li class="step">
+                        <span class="step-number">1</span>
+                        <h3>Schedule Your Service</h3>
+                        <p>Book online or call &mdash; pick the day and window that works for you.</p>
+                    </li>
+                    <li class="step">
+                        <span class="step-number">2</span>
+                        <h3>Receive a Free Estimate</h3>
+                        <p>We diagnose the issue and quote a flat price before any work begins.</p>
+                    </li>
+                    <li class="step">
+                        <span class="step-number">3</span>
+                        <h3>We Complete the Job</h3>
+                        <p>Clean, code-compliant work from a friendly technician who respects your home.</p>
+                    </li>
+                    <li class="step">
+                        <span class="step-number">4</span>
+                        <h3>Enjoy the Guarantee</h3>
+                        <p>Every repair is backed by our written workmanship and satisfaction guarantee.</p>
+                    </li>
+                </ol>
+            </div>
         </section>
 
-        <section class="service-area container" aria-labelledby="area-heading">
-            <h2 id="area-heading">Areas We Serve</h2>
-            <p class="service-area-sub">Proudly serving homeowners and businesses across the metro area.</p>
-            <ul class="area-list">
-                <li>Springfield</li>
-                <li>Riverside</li>
-                <li>Oak Park</li>
-                <li>Maplewood</li>
-                <li>Highland</li>
-                <li>Brookfield</li>
-                <li>Lakeview</li>
-                <li>Glenwood</li>
-                <li>Westbrook</li>
-                <li>Sunnyvale</li>
-                <li>Pinehurst</li>
-                <li>Cedar Falls</li>
-            </ul>
-            <p class="area-note">Don't see your town? Give us a call &mdash; chances are we cover it.</p>
+        <section class="section service-area" aria-labelledby="area-heading">
+            <div class="container">
+                <header class="section-head">
+                    <h2 id="area-heading">Areas We Serve</h2>
+                    <p class="section-sub">Proudly serving homeowners and businesses across the metro area.</p>
+                </header>
+                <ul class="area-list area-list-grid">
+                    <li>Springfield</li>
+                    <li>Riverside</li>
+                    <li>Oak Park</li>
+                    <li>Maplewood</li>
+                    <li>Highland</li>
+                    <li>Brookfield</li>
+                    <li>Lakeview</li>
+                    <li>Glenwood</li>
+                    <li>Westbrook</li>
+                    <li>Sunnyvale</li>
+                    <li>Pinehurst</li>
+                    <li>Cedar Falls</li>
+                </ul>
+                <p class="area-note">Don't see your town? Give us a call &mdash; chances are we cover it.</p>
+            </div>
         </section>
 
-        <section class="testimonials container" aria-labelledby="testimonials-heading">
-            <h2 id="testimonials-heading">What Our Customers Say</h2>
-            <ul class="testimonial-grid">
-                <li class="testimonial">
-                    <p class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-                    <blockquote>Fixed our burst pipe in under an hour. The tech showed up faster than I could mop the floor.</blockquote>
-                    <p class="testimonial-author">&mdash; Jamie R., Springfield</p>
-                </li>
-                <li class="testimonial">
-                    <p class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-                    <blockquote>Replaced our water heater the same day we called. Honest price, clean install, no upsell.</blockquote>
-                    <p class="testimonial-author">&mdash; Priya S., Maplewood</p>
-                </li>
-                <li class="testimonial">
-                    <p class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-                    <blockquote>Diagnosed a hidden leak two other plumbers missed. Saved us thousands in drywall damage.</blockquote>
-                    <p class="testimonial-author">&mdash; Marcus T., Oak Park</p>
-                </li>
-            </ul>
+        <section class="section testimonials" aria-labelledby="testimonials-heading">
+            <div class="container">
+                <header class="section-head">
+                    <h2 id="testimonials-heading">What Our Customers Say</h2>
+                    <p class="section-sub">Real reviews from real neighbors.</p>
+                </header>
+                <div class="testimonial-row">
+                    <article class="testimonial">
+                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <p class="quote">"Fixed our burst pipe in under an hour. The tech showed up faster than I could mop the floor."</p>
+                        <footer>
+                            <span class="customer-name">Jamie R.</span>
+                            <span class="customer-area">Springfield</span>
+                        </footer>
+                    </article>
+                    <article class="testimonial">
+                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <p class="quote">"Replaced our water heater the same day we called. Honest price, clean install, no upsell."</p>
+                        <footer>
+                            <span class="customer-name">Priya S.</span>
+                            <span class="customer-area">Maplewood</span>
+                        </footer>
+                    </article>
+                    <article class="testimonial">
+                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <p class="quote">"Diagnosed a hidden leak two other plumbers missed. Saved us thousands in drywall damage."</p>
+                        <footer>
+                            <span class="customer-name">Marcus T.</span>
+                            <span class="customer-area">Oak Park</span>
+                        </footer>
+                    </article>
+                </div>
+            </div>
         </section>
 
-        <section class="faq container" aria-labelledby="faq-heading">
-            <h2 id="faq-heading">Frequently Asked Questions</h2>
-            <ul class="faq-list">
-                <li class="faq-item">
-                    <details>
-                        <summary>Do you offer free estimates?</summary>
-                        <p>Yes &mdash; we provide a free, no-obligation estimate on every service call before any work begins. You'll know the flat price up front.</p>
-                    </details>
-                </li>
-                <li class="faq-item">
-                    <details>
-                        <summary>What areas do you serve?</summary>
-                        <p>We cover the entire metro area, including Springfield, Riverside, Oak Park, Maplewood, and dozens of surrounding towns. Call us with your zip code if you're unsure.</p>
-                    </details>
-                </li>
-                <li class="faq-item">
-                    <details>
-                        <summary>Are your plumbers licensed and insured?</summary>
-                        <p>Every plumber on our team holds a current state license and is fully insured and bonded. Our company license number is displayed on every invoice and in the footer of this site.</p>
-                    </details>
-                </li>
-                <li class="faq-item">
-                    <details>
-                        <summary>Do you charge for after-hours service?</summary>
-                        <p>Emergency and after-hours calls carry a modest dispatch fee, which is always quoted before we head out. There are no surprise charges once we arrive.</p>
-                    </details>
-                </li>
-                <li class="faq-item">
-                    <details>
-                        <summary>What payment methods do you accept?</summary>
-                        <p>We accept all major credit cards, debit, checks, and cash. Financing is available on larger jobs &mdash; ask your technician for details.</p>
-                    </details>
-                </li>
-            </ul>
+        <section class="section faq" aria-labelledby="faq-heading">
+            <div class="container faq-inner">
+                <header class="section-head">
+                    <h2 id="faq-heading">Frequently Asked Questions</h2>
+                    <p class="section-sub">Quick answers to the things we hear most.</p>
+                </header>
+                <ul class="faq-list">
+                    <li class="faq-item">
+                        <details>
+                            <summary>Do you offer free estimates?</summary>
+                            <p>Yes &mdash; we provide a free, no-obligation estimate on every service call before any work begins. You'll know the flat price up front.</p>
+                        </details>
+                    </li>
+                    <li class="faq-item">
+                        <details>
+                            <summary>What areas do you serve?</summary>
+                            <p>We cover the entire metro area, including Springfield, Riverside, Oak Park, Maplewood, and dozens of surrounding towns. Call us with your zip code if you're unsure.</p>
+                        </details>
+                    </li>
+                    <li class="faq-item">
+                        <details>
+                            <summary>Are your plumbers licensed and insured?</summary>
+                            <p>Every plumber on our team holds a current state license and is fully insured and bonded. Our company license number is displayed on every invoice and in the footer of this site.</p>
+                        </details>
+                    </li>
+                    <li class="faq-item">
+                        <details>
+                            <summary>Do you charge for after-hours service?</summary>
+                            <p>Emergency and after-hours calls carry a modest dispatch fee, which is always quoted before we head out. There are no surprise charges once we arrive.</p>
+                        </details>
+                    </li>
+                    <li class="faq-item">
+                        <details>
+                            <summary>What payment methods do you accept?</summary>
+                            <p>We accept all major credit cards, debit, checks, and cash. Financing is available on larger jobs &mdash; ask your technician for details.</p>
+                        </details>
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <section class="final-cta" aria-labelledby="final-cta-heading">
@@ -334,10 +385,10 @@
                 <h2 id="final-cta-heading">Ready to Schedule Your Service?</h2>
                 <p>Book online or call us now &mdash; we'll have a plumber at your door fast.</p>
                 <div class="final-cta-buttons">
-                    <a class="btn btn-primary" href="index.html#contact">Request a Quote</a>
-                    <a class="btn btn-secondary" href="tel:+15551234567">
-                        <span aria-hidden="true">&#9742;</span>
-                        <span>(555) 123-4567</span>
+                    <a class="btn btn-accent btn-lg" href="index.html#contact">Request a Quote</a>
+                    <a class="btn btn-primary btn-lg btn-call" href="tel:+15555550123">
+                        <span aria-hidden="true">📞</span>
+                        <span>Call Now: (555) 555-0123</span>
                     </a>
                 </div>
             </div>
@@ -345,36 +396,55 @@
     </main>
 
     <footer class="site-footer">
-        <div class="container footer-grid">
-            <div>
-                <p class="brand"><span class="brand-mark" aria-hidden="true">&#9830;</span> <span class="brand-name">BlueLine Plumbing</span></p>
-                <p>1234 Main Street<br>Springfield, ST 00000</p>
-                <p>License #PL-000000</p>
-                <p>Mon&ndash;Fri: 7am&ndash;7pm<br>Sat&ndash;Sun: 24/7 Emergency</p>
+        <div class="container footer-inner">
+            <div class="footer-col">
+                <a href="index.html" class="logo logo-footer" aria-label="BlueLine Plumbing home">
+                    <span class="logo-mark" aria-hidden="true">💧</span>
+                    <span class="logo-text">BlueLine<span class="logo-accent">Plumbing</span></span>
+                </a>
+                <p>1234 Pipe St.<br>Metro City, ST 54321</p>
+                <p>License #PL-0099887</p>
             </div>
-            <div>
-                <h3>Navigate</h3>
+
+            <div class="footer-col">
+                <h4>Hours</h4>
+                <ul class="hours">
+                    <li><span>Mon &ndash; Fri</span><span>7AM &ndash; 7PM</span></li>
+                    <li><span>Sat &ndash; Sun</span><span>8AM &ndash; 5PM</span></li>
+                    <li><span>Emergencies</span><span>24/7</span></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Explore</h4>
                 <ul class="footer-nav">
-                    <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#reviews">Reviews</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
             </div>
-            <div>
-                <h3>Follow Us</h3>
-                <ul class="social-list" aria-label="Social media">
-                    <li><a href="#" aria-label="Facebook">FB</a></li>
-                    <li><a href="#" aria-label="Instagram">IG</a></li>
-                    <li><a href="#" aria-label="Google Reviews">GR</a></li>
+
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <ul class="social">
+                    <li><a href="#" aria-label="Facebook"><span aria-hidden="true">📘</span></a></li>
+                    <li><a href="#" aria-label="Instagram"><span aria-hidden="true">📷</span></a></li>
+                    <li><a href="#" aria-label="Twitter"><span aria-hidden="true">🐦</span></a></li>
+                    <li><a href="#" aria-label="YouTube"><span aria-hidden="true">📺</span></a></li>
                 </ul>
+                <a href="tel:+15555550123" class="footer-phone">📞 (555) 555-0123</a>
             </div>
         </div>
-        <p class="footer-copy">&copy; 2026 BlueLine Plumbing. All rights reserved.</p>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; <span id="year"></span> BlueLine Plumbing. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
-    <a class="sticky-call" href="tel:+15551234567" aria-label="Call BlueLine Plumbing">
-        <span aria-hidden="true">&#9742;</span>
+    <a href="tel:+15555550123" class="sticky-call" aria-label="Call BlueLine Plumbing now">
+        <span aria-hidden="true">📞</span>
         <span>Call Now</span>
     </a>
 
